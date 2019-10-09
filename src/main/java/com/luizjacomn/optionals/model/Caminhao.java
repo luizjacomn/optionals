@@ -1,12 +1,14 @@
 package com.luizjacomn.optionals.model;
 
+import java.util.Optional;
+
 public class Caminhao {
 
 	private String modelo;
     
-	private Seguro seguro;
+	private Optional<Seguro> seguro;
 
-	public Caminhao(String modelo, Seguro seguro) {
+	public Caminhao(String modelo, Optional<Seguro> seguro) {
 		this.modelo = modelo;
 		this.seguro = seguro;
 	}
@@ -19,11 +21,11 @@ public class Caminhao {
 		this.modelo = modelo;
 	}
 
-	public Seguro getSeguro() {
+	public Optional<Seguro> getSeguro() {
 		return seguro;
 	}
 
-	public void setSeguro(Seguro seguro) {
+	public void setSeguro(Optional<Seguro> seguro) {
 		this.seguro = seguro;
 	}
 }
